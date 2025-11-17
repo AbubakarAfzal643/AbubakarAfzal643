@@ -1,6 +1,5 @@
 # 💫 About Me:
-I am a passionate Software Engineering student at FAST NUCES Lahore with hands-on experience in front-end development and desktop applications. I am skilled in HTML, CSS, JavaScript, JAVA,  ReactJS, C/C++, and .NET Framework with SQL. My commitment to building impactful userfocused software solutions is demonstrated through projects like a disaster relief system and an energy management app. I aim to create clean, efficient, and<br>robust software.
-
+I am a passionate Software Engineering student at FAST NUCES Lahore with practical experience in front-end development and responsive design applications. I’m skilled in HTML, CSS, JavaScript, ReactJS, C/C++, and Java alongwith MySQL and Appwrite as database storage.I focus on building clean and reliable software while continually improving my technical and problem-solving abilities. My internships at Elevvo Pathway and Developer Hub Corporation strengthened my communication, teamwork, and adaptability, further enhancing my user centric approach to creating impactful solutions.
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/abubakar.cpp) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/www.linkedin.com/in/abubakar-afzal-214344287)[![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:abubakarafzal643@gmail.com) 
