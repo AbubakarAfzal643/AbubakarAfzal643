@@ -37,15 +37,15 @@ FONT_DIR = ROOT / "fonts"
 PROFILE = {
     "login": "AbubakarAfzal643",
     "name": "Abubakar Afzal",
-    "tagline": "Software engineering undergrad building CS learning tools.",
-    "status": "building COAL and Digital Logic modules",
+    "tagline": "Software engineering undergrad focused on Salesforce CRM development.",
+    "status": "building Salesforce-focused CRM solutions",
     "portrait": None,  # e.g. "assets/portrait.jpg" (square-ish image); None draws a logic gate instead
 }
 
 TILES = [  # key, label, handle shown, url, accent, icon
-    ("linkedin", "LinkedIn", "abubakar-afzal", "https://linkedin.com/in/abubakar-afzal-214344287", "#38bdf8", "in"),
-    ("email", "Email", "abubakarafzal643@gmail.com", "mailto:abubakarafzal643@gmail.com", "#00FFB2", "mail"),
-    ("instagram", "Instagram", "@abubakar.cpp", "https://instagram.com/abubakar.cpp", "#a78bfa", "ig"),
+    ("linkedin", "LinkedIn", "abubakar-afzal", "https://linkedin.com/in/abubakar-afzal-214344287", "#91C9D6", "in"),
+    ("email", "Email", "abubakarafzal643@gmail.com", "mailto:abubakarafzal643@gmail.com", "#6FAFC1", "mail"),
+    ("instagram", "Instagram", "@abubakar.cpp", "https://instagram.com/abubakar.cpp", "#B0C9D1", "ig"),
 ]
 
 FEATURED = [  # repo is "owner/name"; stats come from data/contributions.json when present
@@ -86,17 +86,16 @@ FEATURED = [  # repo is "owner/name"; stats come from data/contributions.json wh
     },
 ]
 
-# Palette: brand #00FFB2 and JetBrains Mono come from the current README
-# (typing banner); cyan/purple are the accents used on the learning app.
+# Palette sampled from the deep teal and blue-gray accents in the GitHub avatar.
 THEME = {
-    "bg": "#0b1016",
-    "surface": "#111923",
-    "border": "#1f2c3a",
-    "text": "#e6edf3",
-    "muted": "#8a99a8",
-    "brand": "#00FFB2",
-    "empty": "#151f2b",
-    "star": "#e3b341",
+    "bg": "#071923",
+    "surface": "#0B2631",
+    "border": "#194657",
+    "text": "#EAF2F4",
+    "muted": "#9AB4BF",
+    "brand": "#91C9D6",
+    "empty": "#122F3B",
+    "star": "#B0C9D1",
 }
 CHAR_W = 0.6  # JetBrains Mono advance, in em
 
