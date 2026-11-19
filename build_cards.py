@@ -421,7 +421,8 @@ def card_hero(delay: float) -> Card:
         c.add(f'<g {an("fade", c.d(0.4))}>')
         c.add(f'<path d="{cloud}" fill="{mix(THEME["bg"], brand, .08)}" stroke="{brand}" '
               f'stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>')
-        c.text(700, 140, "salesforce developer", 12, 800, brand, anchor="middle")
+        c.text(700, 132, "salesforce", 13, 800, brand, anchor="middle")
+        c.text(700, 150, "developer", 13, 800, brand, anchor="middle")
         c.add("</g>")
     return c
 
@@ -613,7 +614,7 @@ def card_graph(stats: dict, delay: float) -> Card:
 # --------------------------------------------------------------------------
 def write_preview(names: list[str]) -> None:
     hero = next(n for n in names if n == "hero-salesforce")
-    tiles = "".join(f'<img src="{n}.svg" style="width:32.4%;vertical-align:top;margin:0 .3%">' for n in names
+    tiles = "".join(f'<img src="{n}.svg" style="width:32.2%;vertical-align:top;margin:0 .48%">' for n in names
                     if n.startswith("tile-"))
     rest = "".join(f'<img src="{n}.svg" style="width:100%;display:block;margin:12px 0">' for n in names
                    if not n.startswith("tile-") and n != hero)
