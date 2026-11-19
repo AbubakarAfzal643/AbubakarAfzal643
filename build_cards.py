@@ -39,7 +39,7 @@ PROFILE = {
     "name": "Abubakar Afzal",
     "tagline": "Software engineering undergrad focused on Salesforce CRM development.",
     "status": "building Salesforce-focused CRM solutions",
-    "portrait": None,  # e.g. "assets/portrait.jpg" (square-ish image); None draws a logic gate instead
+    "portrait": None,  # e.g. "assets/portrait.jpg" (square-ish image)
 }
 
 TILES = [  # key, label, handle shown, url, accent, icon
@@ -399,7 +399,7 @@ def card_hero(delay: float) -> Card:
     c.text(PAD + 28, py + 17, status, 12, 400, THEME["text"])
     c.add("</g>")
 
-    # right-hand graphic: portrait if supplied, otherwise an AND gate
+    # right-hand graphic: portrait if supplied, otherwise the Salesforce cloud mark
     portrait = PROFILE.get("portrait")
     if portrait and (ROOT / portrait).exists():
         p = ROOT / portrait
@@ -410,15 +410,19 @@ def card_hero(delay: float) -> Card:
               f'preserveAspectRatio="xMidYMid slice" clip-path="url(#pc)"/>'
               f'<circle cx="705" cy="126" r="73" fill="none" stroke="{brand}" stroke-width="2"/></g>')
     else:
-        for y, lab in ((112, "A"), (144, "B")):
-            c.add(f'<path d="M628 {y}H672" stroke="{border}" stroke-width="2" fill="none"/>')
-            c.add(f'<path d="M628 {y}H672" stroke="{brand}" stroke-width="2" fill="none" {an("flow", c.d(0.5))}/>')
-            c.text(614, y + 4, lab, 12, 400, muted, anchor="end", extra=an("fade", c.d(0.5)))
-        c.add(f'<path d="M728 128H790" stroke="{border}" stroke-width="2" fill="none"/>')
-        c.add(f'<path d="M728 128H790" stroke="{brand}" stroke-width="2" fill="none" {an("flow", c.d(0.9))}/>')
-        c.text(802, 132, "Y", 12, 400, muted, extra=an("fade", c.d(0.9)))
-        c.add(f'<path d="M672 98H698A30 30 0 0 1 698 158H672Z" fill="{mix(THEME["bg"], brand, .07)}" '
-              f'stroke="{brand}" stroke-width="2.5" stroke-linejoin="round" {draw_attrs(206.3, c.d(0.4))}/>')
+        cloud = (
+            "M661 175C647 178 635 169 633 156C621 151 616 138 621 126"
+            "C625 115 636 108 648 109C649 94 660 82 675 80"
+            "C687 77 699 82 706 91C719 83 735 86 743 98"
+            "C757 96 769 106 772 119C783 128 783 144 775 154"
+            "C768 164 756 168 744 165C736 177 721 182 707 177"
+            "C695 189 677 190 666 180C664 178 662 177 661 175Z"
+        )
+        c.add(f'<g {an("fade", c.d(0.4))}>')
+        c.add(f'<path d="{cloud}" fill="{mix(THEME["bg"], brand, .08)}" stroke="{brand}" '
+              f'stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>')
+        c.text(700, 140, "salesforce", 17, 800, brand, anchor="middle")
+        c.add("</g>")
     return c
 
 
