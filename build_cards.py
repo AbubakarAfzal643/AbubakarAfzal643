@@ -352,7 +352,7 @@ def icon_repo(x, y, color):
 def card_hero(delay: float) -> Card:
     W, H, PAD = 830, 252, 48
     brand, muted, border = THEME["brand"], THEME["muted"], THEME["border"]
-    c = Card("hero", W, H, delay, f"{PROFILE['name']}: {PROFILE['tagline']}")
+    c = Card("hero-salesforce", W, H, delay, f"{PROFILE['name']}: {PROFILE['tagline']}")
     c.shell(20)
     c.defs.append(
         f'<radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="{brand}" stop-opacity=".22"/>'
@@ -427,7 +427,7 @@ def card_hero(delay: float) -> Card:
 
 
 def card_tile(key, label, handle, accent, icon, delay) -> Card:
-    W, H = 270, 118
+    W, H = 270, 122
     c = Card(f"tile-{key}", W, H, delay, f"{label}: {handle}")
     c.shell(16)
     c.defs.append(f'<clipPath id="tc"><rect width="{W}" height="{H}" rx="16"/></clipPath>')
@@ -612,14 +612,16 @@ def card_graph(stats: dict, delay: float) -> Card:
 # Output
 # --------------------------------------------------------------------------
 def write_preview(names: list[str]) -> None:
-    tiles = "".join(f'<img src="{n}.svg" style="width:32.5%">' for n in names if n.startswith("tile-"))
-    rest = "".join(f'<img src="{n}.svg" style="width:100%;display:block;margin:8px 0">' for n in names
-                   if not n.startswith("tile-") and n != "hero")
+    hero = next(n for n in names if n == "hero-salesforce")
+    tiles = "".join(f'<img src="{n}.svg" style="width:30.5%;vertical-align:top;margin:0 .7%">' for n in names
+                    if n.startswith("tile-"))
+    rest = "".join(f'<img src="{n}.svg" style="width:100%;display:block;margin:12px 0">' for n in names
+                   if not n.startswith("tile-") and n != hero)
     page = (
         "<!doctype html><meta charset=utf-8><title>README preview</title>"
         "<body style='margin:0;background:#0d1117;display:flex;justify-content:center'>"
         "<div style='width:830px;padding:24px 0;text-align:center'>"
-        f"<img src='hero.svg' style='width:100%;display:block;margin:0 0 8px'>"
+        f"<img src='{hero}.svg' style='width:100%;display:block;margin:0 0 16px'>"
         f"<div>{tiles}</div>{rest}</div></body>"
     )
     (OUT / "preview.html").write_text(page, encoding="utf-8")
