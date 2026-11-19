@@ -613,7 +613,7 @@ def card_graph(stats: dict, delay: float) -> Card:
 # --------------------------------------------------------------------------
 def write_preview(names: list[str]) -> None:
     hero = next(n for n in names if n == "hero-salesforce")
-    tiles = "".join(f'<img src="{n}.svg" style="width:32.8%;vertical-align:top;margin:0 .25%">' for n in names
+    tiles = "".join(f'<img src="{n}.svg" style="width:32.4%;vertical-align:top;margin:0 .3%">' for n in names
                     if n.startswith("tile-"))
     rest = "".join(f'<img src="{n}.svg" style="width:100%;display:block;margin:12px 0">' for n in names
                    if not n.startswith("tile-") and n != hero)

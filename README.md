@@ -5,9 +5,9 @@
 </p>
 
 <p>
-<a href="https://linkedin.com/in/abubakar-afzal-214344287"><img src="cards/tile-linkedin.svg" alt="LinkedIn: abubakar-afzal" width="32.8%"></a>
-<a href="mailto:abubakarafzal643@gmail.com"><img src="cards/tile-email.svg" alt="Email: abubakarafzal643@gmail.com" width="32.8%"></a>
-<a href="https://instagram.com/abubakar.cpp"><img src="cards/tile-instagram.svg" alt="Instagram: @abubakar.cpp" width="32.8%"></a>
+<a href="https://linkedin.com/in/abubakar-afzal-214344287"><img src="cards/tile-linkedin.svg" alt="LinkedIn: abubakar-afzal" width="32.4%"></a>
+<a href="mailto:abubakarafzal643@gmail.com"><img src="cards/tile-email.svg" alt="Email: abubakarafzal643@gmail.com" width="32.4%"></a>
+<a href="https://instagram.com/abubakar.cpp"><img src="cards/tile-instagram.svg" alt="Instagram: @abubakar.cpp" width="32.4%"></a>
 </p>
 
 <p>
